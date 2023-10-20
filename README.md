@@ -4,4 +4,11 @@
 
 ## Screenshots
 
- ![alt text](http://url/to/img.png)
+ Web
+ ![alt text](src/website-demo-images/demoFull.png) 
+ 
+ Phone
+ ![alt text](src/website-demo-images/demo-collage.jpg)
+ 
+ 
+ 
