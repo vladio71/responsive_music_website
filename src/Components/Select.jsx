@@ -1,6 +1,5 @@
 import React from 'react'
 import {useState} from "react";
-import {BiSolidDownArrow} from "react-icons/bi";
 import css from './Components.module.css'
 import Arrow from "./Arrow";
 

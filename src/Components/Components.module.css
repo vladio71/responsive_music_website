@@ -34,6 +34,11 @@
 .cancelMargin{
     margin-left: 0;
 }
+.icon{
+    position: absolute;
+
+}
+
 
 .NavigationInnerFlex {
     position: absolute;

@@ -1,37 +1,62 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const path = require("path");
 
 module.exports = {
-    mode: "development",
+
     entry: "./src/index.js",
     output: {
-        filename: "bundle.[hash].js",
+        filename: "bundle.[fullhash].js",
         path: path.resolve(__dirname, "dist"),
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html",
         }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+        }),
+
+
     ],
     resolve: {
         modules: [__dirname, "src", "node_modules"],
-        extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
+        extensions: ["mjs", ".js", ".jsx", ".tsx", ".ts"],
     },
     module: {
         rules: [
+
             {
-                test: /\.jsx?$/,
+                test: /\.mjs|jsx?$/,
                 exclude: /node_modules/,
-                loader: require.resolve("babel-loader"),
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            [
+                                "@babel/preset-react"
+                            ],
+                            ["@babel/preset-env", {"modules": false} ]
+
+                        ]
+                    }
+                }
             },
+            // {
+            //     test: /\.css$/,
+            //     use: ["style-loader", "css-loader"],
+            // },
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
             {
                 test: /\.png|svg|jpg|gif$/,
                 use: ["file-loader"],
             },
+
         ],
     },
 };
+

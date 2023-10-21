@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles/global.css'
 import css from './styles/Home.module.css';
-import {IoIosArrowForward} from "react-icons/io";
 import {useEffect, useRef, useState} from "react";
 import FooterLink from "./Components/link";
 import Select from "./Components/Select";
@@ -128,7 +127,7 @@ const App = () => {
                             <span
                                 onClick={handleAnimationDelay}
                                 style={{zIndex: '10', color: `${color}`}}>
-                                <div style={{position: 'relative', display:'inline-block' , width: '100px'}}>
+                                <div style={{position: 'relative', display: 'inline-block', width: '100px'}}>
                                 Menu
                                     <Arrow open={isModalActive}/>
                                 </div>
@@ -319,7 +318,12 @@ const App = () => {
                         <div className={css.link}>
                             See latest jobs
                             <div className={css.icon}>
-                                <IoIosArrowForward/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024">
+                                    <path fill="currentColor"
+                                          d="M340.864 149.312a30.592 30.592 0 0 0 0 42.752L652.736 512L340.864 831.872a30.592 30.592 0 0 0 0 42.752a29.12 29.12 0 0 0 41.728 0L714.24 534.336a32 32 0 0 0 0-44.672L382.592 149.376a29.12 29.12 0 0 0-41.728 0z"/>
+                                </svg>
+
+
                             </div>
                         </div>
                     </div>

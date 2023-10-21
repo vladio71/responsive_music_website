@@ -1,5 +1,4 @@
 import React from 'react'
-import {AiOutlinePlus} from "react-icons/ai";
 import css from './Components.module.css'
 import homeCss from '../styles/Home.module.css'
 import {useEffect, useRef} from "react";
@@ -30,7 +29,11 @@ const Navigation = ({active}) => {
             </div>
             <div style={{color: 'crimson'}}>
                 More
-                <AiOutlinePlus/>
+                <span className={css.icon}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1024 1024"><path
+                    fill="currentColor"
+                    d="M480 480V128a32 32 0 0 1 64 0v352h352a32 32 0 1 1 0 64H544v352a32 32 0 1 1-64 0V544H128a32 32 0 0 1 0-64h352z"/></svg>
+                </span>
             </div>
             <div className={`${homeCss.rightItems} ${active?css.cancelMargin:''}`}>
 
