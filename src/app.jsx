@@ -28,6 +28,7 @@ const App = () => {
     }, [lastTopScroll, stickyNav, isNavActive])
 
     useEffect(() => {
+
         window.addEventListener('resize', handleResize)
         return () => {
             window.removeEventListener('resize', handleResize)
@@ -207,7 +208,7 @@ const App = () => {
             </div>
             <div className={css.videoContainer}>
                 <iframe id="ytplayer" type="text/html" width="100%" height="100%"
-                        src=" http://www.youtube.com/embed/vvvvcpwFw5o?autoplay=0"
+                        src="www.youtube.com/embed/vvvvcpwFw5o?autoplay=0"
                         frameBorder="0"/>
             </div>
             <div className={css.textBlock}>
