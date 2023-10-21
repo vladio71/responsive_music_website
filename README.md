@@ -1,6 +1,6 @@
 # Responsive music website
 
- A fully responsive website, build with HTML CSS JS REACT.
+ A fully responsive website with some animations, build with HTML CSS JS REACT.
 
 ## Screenshots
 
